@@ -1,0 +1,50 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/sign/sign",
+        "pages/mine/mine",
+        "pages/search/search",
+        "pages/detail/detail",
+        "pages/out/out",
+        "pages/collect/collect",
+        "pages/enroll/enroll",
+        "pages/activity_list/activity_list"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#DAA520",
+        "navigationBarTitleText": "Volunteers",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#000000",
+        "backgroundColor": "#fafafa",
+        "position": "bottom",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icons/index-o.png",
+                "selectedIconPath": "icons/index.png"
+            },
+            {
+                "pagePath": "pages/sign/sign",
+                "text": "签到",
+                "iconPath": "icons/sign.png",
+                "selectedIconPath": "icons/sign-o.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "icons/mine.png",
+                "selectedIconPath": "icons/mine-o.png"
+            }
+        ]
+    },
+    
+    "sitemapLocation": "sitemap.json",
+    "cloud":true
+}

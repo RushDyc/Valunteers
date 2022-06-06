@@ -1,0 +1,15 @@
+<SearchInput></SearchInput>
+<view class="act_connect">
+    <navigator class="act_item"
+    wx:for="{{activityList}}"
+    wx:key = "act_id"
+    url = "/pages/detail/detail?act_id={{item.act_id}}">
+        <view class="act_img_warp">
+            <image mode="widthFix" src="{{item.image_src}}" />             
+        </view>
+        <view class="act_info_warp">
+            <view class="act_name">{{item.act_name}}</view>
+            <view class="act_time">{{item.act_time}}</view>
+        </view>
+    </navigator>
+</view>

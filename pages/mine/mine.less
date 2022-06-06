@@ -1,0 +1,107 @@
+page {
+    background-color: #edece8;
+}
+.user_info_warp {
+    height: 40vh;
+    position: relative;
+    .user_img_warp {
+        position: relative;
+        .user_bg {
+            width: 100%;
+            height: 40vh;
+            //高斯模糊
+            filter: blur(15rpx);
+        }
+        .user_info {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 25%;
+            text-align: center;
+        }
+            .user_icon {
+                width: 150rpx;
+                height:150rpx;
+                border-radius: 50%;
+            }
+            .user_name {
+                color: #fff;
+                margin-top: 30rpx;
+                font-size: 40rpx;
+            }
+    }
+    .user_btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40%;
+        padding: 35rpx;
+    }
+}
+.user_content {
+    position: relative;
+    .user_main {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        .act_info_warp {
+            margin-top: 80rpx;
+            background-color: #fff;
+            navigator {
+                padding: 15rpx 0;
+                display: flex;
+                // margin: 20rpx 0 20rpx 0;
+                border-bottom: 1rpx solid #eee;
+                image {
+                    margin: 0 25rpx 0 60rpx;
+                    width: 6vw;
+                    height: 4vh;
+                    
+                }
+                .act_me {
+                    flex:1;
+                    font-size: 33rpx;
+                }
+            }
+        }
+        .app_info_warp {
+            margin-top: 30rpx;
+            background-color: #fff;
+            .app_info_item {
+                display: flex;
+                padding: 15rpx 0;
+                // margin: 20rpx 0 20rpx 0;
+                border-bottom: 1rpx solid #eee;
+                image {
+                    margin: 0 25rpx 0 60rpx;
+                    width: 6vw;
+                    height: 4vh;
+                }
+                text {
+                    flex:1;
+                    font-size: 33rpx;
+                }
+            }
+        }
+        .recommend_warp {
+            margin-top: 30rpx;
+            background-color: #fff;
+            .rec_info_item {
+                display: flex;
+                padding: 15rpx 0;
+                image {
+                    margin: 0 25rpx 0 60rpx;
+                    width: 6vw;
+                    height: 4vh;
+                }
+                text {
+                    flex:1;
+                    font-size: 30rpx;
+                }
+            }
+            
+            
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.act_connect {
+    .act_item {
+        display: flex;
+        border: 1rpx solid #ccc;
+        .act_img_warp {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            image {
+                width: 70%;
+            }
+        }
+        .act_info_warp {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .act_name{
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                font-size: 35rpx;
+                padding-top: 15rpx;
+            }
+            .act_time{
+                color: var(--themeColor);
+                font-size: 30rpx;
+            }
+        }
+    }
+}

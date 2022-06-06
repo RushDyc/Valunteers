@@ -1,0 +1,31 @@
+.act_connect .act_item {
+  display: flex;
+  border: 1rpx solid #ccc;
+}
+.act_connect .act_item .act_img_warp {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.act_connect .act_item .act_img_warp image {
+  width: 70%;
+}
+.act_connect .act_item .act_info_warp {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.act_connect .act_item .act_info_warp .act_name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  font-size: 35rpx;
+  padding-top: 15rpx;
+}
+.act_connect .act_item .act_info_warp .act_time {
+  color: var(--themeColor);
+  font-size: 30rpx;
+}

@@ -1,0 +1,12 @@
+<!-- <text bindtap="scanCodeEvent">{{scanCode}}</text> -->
+<view style="margin-top:60px">
+    <view class="sign_saoma">
+        <image mode="widthFix" src="../../icons/saoma.png" />
+    </view>
+    <text style="margin-top:60px">点击下方按钮即可扫码计时</text>
+    <view style="margin-top:20rpx">
+    <button style="width:50vw;font-size:11pt !important" bindtap="saoma">扫码记录服务时长</button></view>
+</view>
+<view >
+    <text style="margin-top:60px">活动开始前，请扫描活动管理员提供的二维码签\n到；活动结束后，请扫描活动管理员提供的二维码\n签退，系统将自动记录您的志愿服务时长。</text>
+</view>

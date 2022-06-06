@@ -1,0 +1,13 @@
+<view class="search_row">
+    <input value="{{inpValue}}" placeholder="请输入您要搜索的活动" bindinput="handleInput"></input>
+    <button bindtap="handleCancel" hidden="{{!isFocus}}">取消</button>
+</view>
+<view class="search_content">
+    <navigator class="search_item"
+    wx:for="{{activity}}"
+    wx:key = "act_id"
+    url="/pages/detail/detail?act_id={{item.act_id}}"
+    >
+    {{item.act_name}}
+    </navigator> 
+</view>

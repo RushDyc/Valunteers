@@ -1,0 +1,148 @@
+<scroll-view>
+<view class='vol_index'>
+
+<!--搜索框 开始-->
+<SearchInput></SearchInput>
+<!--搜索框 结束-->
+</view>
+<!--  
+    1 轮播图外层容器 swiper
+    2 每一个轮播项 swiper-item
+    3 swiper标签 存在默认样式
+        1 width 100%
+        2 height：150px image 存在默认宽度和高度 375.2*150
+        3 swiper 高度 无法实现由内容撑开
+    4 先找出 原图的宽度和高度 等比例 给 swiper 定宽度和高度  
+    5 autoplay 自动轮播  
+    6 interval 修改轮播时间
+    7 circular 衔接轮播
+    8 indicator-dots 显示指示器 分页器 索引器
+    9 indicator-color 指示器未选中颜色
+    10 indicator-active-color 选中时指示器颜色
+    -->
+<swiper autoplay interval="1500" circular indicator-dots>
+    <swiper-item><navigator url="/pages/activity_list/activity_list" open-type="navigate">
+    <image mode="widthFix" src="//i.loli.net/2021/07/08/LPgSlHOtKZxM796.png"/></navigator></swiper-item>
+    <swiper-item><image mode="widthFix" src="//i.loli.net/2021/07/08/waCmBA7Ny46lxPg.jpg"/></swiper-item>
+    <swiper-item><image mode="widthFix" src="//i.loli.net/2021/07/08/onaHJS6ue7hwiBm.jpg"/></swiper-item>
+</swiper> 
+    <!--导航 开始-->
+    <view class="index_cate">
+    <navigator url = "/pages/activity_list/activity_list">
+        <image mode="widthFix" src="../../icons/vol.png"/><text>做志愿</text>
+    </navigator>
+    <navigator>
+        <image mode="widthFix" src="../../icons/form.png"/><text>找组织</text>
+    </navigator>
+    <navigator url="/pages/out/out">
+        <image mode="widthFix" src="../../icons/papers.png"/><text>志愿证</text>       
+    </navigator>
+    <navigator>
+        <image mode="widthFix" src="../../icons/perfer.png"/><text>志愿惠</text>
+    </navigator>
+        <!--  -->
+    </view>
+     <!-- <view class="index_cate">
+        <navigator 
+        wx:for="{{catesList}}"
+        wx:key="name"
+        >   
+        <image mode="widthFix" src="{{item.iamge_src}}">
+        </image>
+        </navigator>
+    </view>  -->
+    <!--导航 结束-->
+
+    <!--
+        1 父组件(页面) 向子组件 传递数据 通过 标签属性的方式来传递
+            1 在子组件上进行接收
+            2 把这个数据当成是data中的数据直接用即可
+        2 子向父传递数据 通过事件的方式传递
+            1 在子组件的标签上加入一个 自定义事件
+        -->
+    <Tabs tabs="{{tabs}}" binditemChange="hanldeItemChange"></Tabs>
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="index_content">
+            <block wx:if="{{floorList[0].id==0}}">
+                <navigator
+                wx:for="{{floorList[0].content}}"
+                wx:key="id"
+                url="/pages/detail/detail?act_id={{item.act_id}}"
+                >
+                 <view class="content_list" >
+                    <image mode="widthFix" src="{{item.image_src}}" />
+                    <view class="list_one">
+                        <text class='name' style="margin-top:15px ">{{item.name}}</text>
+                        <text class='adress'>{{item.adress}}</text>
+                        <text class='org'>{{item.org}}</text>
+                        </view>
+                </view>
+                </navigator>
+            </block>
+        </view>
+    </block>
+
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view class=".index_content">
+            <block wx:if="{{floorList[1].id==1}}">
+                <navigator
+                wx:for="{{floorList[1].content}}"
+                wx:key="id"
+                 url="/pages/detail/detail?act_id={{item.act_id}}"
+                >
+                 <view class="content_list" >
+                    <image mode="widthFix" src="{{item.image_src}}" />
+                    <view class="list_one">
+                        <text class='name' style="margin-top:15px ">{{item.name}}</text>
+                        <text class='adress'>{{item.adress}}</text>
+                        <text class='org'>{{item.org}}</text>
+                        </view>
+                </view>
+                </navigator>
+            </block>
+        </view>
+    </block>
+
+    <block wx:elif="{{tabs[2].isActive}}">
+        <view class=".index_content">
+            <block wx:if="{{floorList[2].id==2}}">
+                <navigator
+                wx:for="{{floorList[2].content}}"
+                wx:key="id"
+                 url="/pages/detail/detail?act_id={{item.act_id}}"
+                >
+                 <view class="content_list" >
+                    <image mode="widthFix" src="{{item.image_src}}" />
+                    <view class="list_one">
+                        <text class='name' style="margin-top:15px ">{{item.name}}</text>
+                        <text class='adress'>{{item.adress}}</text>
+                        <text class='org'>{{item.org}}</text>
+                        </view>
+                </view>
+                </navigator>
+            </block>
+        </view>
+    </block>
+
+    <block wx:else>
+       <view class=".index_content">
+            <block wx:if="{{floorList[3].id==3}}">
+                <navigator
+                wx:for="{{floorList[3].content}}"
+                wx:key="id"
+                url="/pages/detail/detail?act_id={{item.act_id}}"
+                >
+                 <view class="content_list" >
+                    <image mode="widthFix" src="{{item.image_src}}" />
+                    <view class="list_one">
+                        <text class='name' style="margin-top:15px ">{{item.name}}</text>
+                        <text class='adress'>{{item.adress}}</text>
+                        <text class='org'>{{item.org}}</text>
+                        </view>
+                </view>
+                </navigator>
+            </block>
+        </view>
+    </block>
+</scroll-view>
+  

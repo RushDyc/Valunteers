@@ -1,0 +1,20 @@
+/* pages/sign/sign.wxss */
+.sign_saoma{
+    display: flex;
+    justify-content: center;
+}
+image{
+    width: 50%;
+}
+button{
+    color:white;
+    background-color:#DAA520 ;
+    display: flex;
+    justify-content: center;
+}
+text{
+    display: flex;
+    justify-content: center;
+    color: darkgray;
+    font-size: 27rpx;
+}

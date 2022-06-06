@@ -1,0 +1,41 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail_pic">
+    <image mode="widthFix" src="{{activity[0].image_src}}"></image>
+</view>
+<view class="act_name">{{activity[0].act_name}}</view>
+<view class="collect">
+    <image mode="widthFix" src="../../icons/shijian.png"/>
+    <view class="act_time">{{activity[0].act_time}}</view>
+</view>
+<view class="adress collect">
+    <image mode="widthFix" src="../../icons/adr.png"/>
+    <view class="act_adress act_time">{{activity[0].act_adress}}</view>
+</view>
+<view class="adress collect">
+    <image mode="widthFix" src="../../icons/org.png"/>
+    <view class="act_org act_time">{{activity[0].act_org}}</view>
+</view>
+<view class="account">
+    <view class="box">
+        <text>活动简介</text>
+    </view>
+    <view class="act_account">{{activity[0].act_account}}</view>
+</view>
+<view class="account">
+    <view class="box">
+        <text>活动内容</text>
+    </view>
+    <view class=".act_content act_account">{{activity[0].act_content}}</view>
+</view>
+<view class="account">
+    <view class="box">
+        <text>报名要求</text>
+    </view>
+    <view class=".act_require act_account">{{activity[0].act_require}}</view>
+</view>
+<view class="btm_tool">
+    <view class="btn_enr" bindtap="handleEnrAdd">我要报名</view>
+    <view class="btn_col" bindtap="handleCollect">收藏</view>
+</view>
+
+

@@ -1,0 +1,2 @@
+<!--pages/out/out.wxml-->
+<web-view src="https://wxcs.gdzyz.cn//view/welfare/welfare.jsp"></web-view>

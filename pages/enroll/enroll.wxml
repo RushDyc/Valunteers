@@ -1,0 +1,17 @@
+<view class="enroll_title">我的报名</view>
+<view class="enroll_content">
+    <navigator
+        wx:for="{{enroll}}"
+        wx:key="act_id"
+        url="/pages/detail/detail?act_id={{item.act_id}}"
+    >
+    <view class="content_list" >
+        <image mode="widthFix" src="{{item.image_src}}" />
+        <view class="list_one">
+            <text class='name' style="margin-top:15px ">{{item.act_name}}</text>
+            <text class='adress'>{{item.act_adress}}</text>
+            <text class='org'>{{item.act_org}}</text>
+        </view>
+                </view>
+                </navigator>
+</view>

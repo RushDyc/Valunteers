@@ -1,0 +1,42 @@
+view {
+  /* 使用主题颜色 */
+  /* color:var(--themeColor); */
+}
+swiper {
+  width: 100%;
+  height: calc(100vw * 375 / 750);
+}
+image {
+  width: 100%;
+}
+.index_cate {
+  display: flex;
+  font-size: 20rpx;
+}
+.index_cate navigator {
+  padding: 55rpx;
+  flex: 1;
+}
+.index_cate navigator image {
+  width: 80%;
+}
+.index_content .content_list {
+  display: flex;
+}
+.index_content .list_one {
+  display: flex;
+  flex-direction: column;
+}
+.index_content .list_one .adress {
+  margin-top: 12px;
+  font-size: 12px;
+  color: darkgray;
+}
+.index_content .org {
+  margin-top: 5px;
+  font-size: 12px;
+  color: darkgray;
+}
+.index_content image {
+  width: 28%;
+}
